@@ -1,0 +1,22 @@
+{
+	"files.associations": {
+		".env*": "dotenv",
+		"unistd.h": "c",
+		"libft.h": "c",
+		"array": "c",
+		"hash_map": "c",
+		"bitset": "c",
+		"string_view": "c",
+		"format": "c",
+		"initializer_list": "c",
+		"ranges": "c",
+		"span": "c",
+		"valarray": "c",
+		"*.": "c",
+		"tests.h": "c",
+		"stdlib.h": "c",
+		"cstring": "c",
+		"stdio.h": "c",
+		"string.h": "c"
+	}
+}
