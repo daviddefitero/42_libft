@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/09/15 21:35:47 by david            ###   ########.fr       */
+/*   Updated: 2025/09/29 15:16:20 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,20 @@ typedef __SIZE_TYPE__	t_size;
 /* ********** Libc FUNCTIONS ********** */
 
 /* ------ No external functions ------- */
-// • memset
-// • bzero
-// • memcpy
-// • memccpy
-// • memmove
-// • memchr
-// • memcmp
+// • isalpha
+int		ft_isalpha(int c);
+// • isdigit
+// • isalnum
+// • isascii
+// • isprint
 
 // • strlen
 t_size	ft_strlen(const char *s);
+
+// • memset
+// • bzero
+// • memcpy
+// • memmove
 
 // • strlcpy
 t_size	ft_strlcpy(char *dst, const char *src, t_size size);
@@ -32,25 +36,23 @@ t_size	ft_strlcpy(char *dst, const char *src, t_size size);
 // • strlcat
 t_size	ft_strlcat(char *dst, const char *src, t_size size);
 
+// • toupper
+// • tolower
+
 // • strchr
 char	*ft_strchr(const char *s, int c);
 
 // • strrchr
-// • strnstr
 
 // • strncmp
 int		ft_strncmp(const char *s1, const char *s2, t_size n);
 
-// atoi - IN PROGRESS
-int		ft_atoi(const char *nptr);
+// • memchr
+// • memcmp
+// • strnstr
 
-// • isalpha
-// • isdigit
-// • isalnum
-// • isascii
-// • isprint
-// • toupper
-// • tolower
+// • atoi
+int		ft_atoi(const char *nptr);
 
 /* --------- “malloc” allowed --------- */
 // • calloc

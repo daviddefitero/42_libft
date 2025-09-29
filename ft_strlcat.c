@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 23:49:23 by david             #+#    #+#             */
-/*   Updated: 2025/09/15 21:57:57 by david            ###   ########.fr       */
+/*   Updated: 2025/09/29 12:46:30 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ t_size	ft_strlcat(char *dst, const char *src, t_size size)
 		dst++;
 	while (size-- > 1 && *t_src)
 		*(dst++) = *(t_src++);
-	dst = '\0';
+	dst = "\0";
 	return (dst_len + ft_strlen(src));
 }

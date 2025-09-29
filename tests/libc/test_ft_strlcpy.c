@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_strlcpy.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 21:51:29 by david             #+#    #+#             */
-/*   Updated: 2025/09/23 01:04:52 by david            ###   ########.fr       */
+/*   Updated: 2025/09/29 15:49:09 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
 #include "../tests.h"
 
 static void	ft_get_values(char **r_str, char **expted, char **rslt)

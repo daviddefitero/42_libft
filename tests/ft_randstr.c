@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_randstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 00:48:59 by david             #+#    #+#             */
-/*   Updated: 2025/09/17 21:20:16 by david            ###   ########.fr       */
+/*   Updated: 2025/09/29 15:26:41 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
-#include <stdlib.h>
 
 char	*ft_randstr(int max)
 {

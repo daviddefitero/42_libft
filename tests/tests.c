@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   tests.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:31:46 by david             #+#    #+#             */
-/*   Updated: 2025/09/23 00:53:38 by david            ###   ########.fr       */
+/*   Updated: 2025/09/29 15:46:04 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <time.h>
-#include <stdlib.h>
-#include <string.h>
 #include "tests.h"
 
 int	ft_get_nbr_test(void)
@@ -60,6 +58,20 @@ void	ft_check_int(t_test *test, int expted, int rslt)
 	}
 }
 
+void	ft_check_boolean(t_test *test, int expted, int rslt)
+{
+	if ((expted && rslt) || (!expted && !rslt))
+	{
+		test->pass++;
+		printf("** ✅ TEST Nº%d: %d == %d\n\n", test->t_n, expted, rslt);
+	}
+	else
+	{
+		test->fail++;
+		printf("** ❌ TEST Nº%d: %d != %d\n\n", test->t_n, expted, rslt);
+	}
+}
+
 static void	ft_print_header(void)
 {
 	printf("\n***********************************************\n");
@@ -68,7 +80,7 @@ static void	ft_print_header(void)
 	printf("* Select a function:\n");
 	printf("\n--------------- LIBC FUNCTIONS ----------------\n");
 	printf("** 1. ft_strlen\n** 2. ft_strlcpy\n** 3. ft_strlcat\n");
-	printf("** 0. Exit\n");
+	printf("** 4. ft_isalpha\n** 0. Exit\n");
 	printf("\n***** ----> ");
 }
 
@@ -88,5 +100,7 @@ int	main(void)
 			test_ft_strlcpy();
 		else if (usr_choice == 3)
 			test_ft_strlcat();
+		else if (usr_choice == 4)
+			test_ft_isalpha();
 	}
 }

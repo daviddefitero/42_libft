@@ -1,16 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_strlcat.c                                  :+:      :+:    :+:   */
+/*   test_ft_strncmp.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/17 21:51:29 by david             #+#    #+#             */
-/*   Updated: 2025/09/29 15:26:27 by dde-fite         ###   ########.fr       */
+/*   Created: 2025/09/29 15:48:31 by dde-fite          #+#    #+#             */
+/*   Updated: 2025/09/29 15:57:12 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../tests.h"
+
+static int	ft_max_value(int a, int b) {
+	if (a > b)
+	{
+		
+	}
+	
+}
 
 static void	ft_get_values(char *r_str[2], char **expted, char **rslt)
 {
@@ -25,16 +33,13 @@ static void	ft_get_values(char *r_str[2], char **expted, char **rslt)
 		len_r_str[i] = strlen(r_str[i]);
 		i++;
 	}
-	total_len = len_r_str[0] + len_r_str[1] + 1;
+	max_len = 
 	*expted = malloc(total_len);
 	*rslt = malloc(total_len);
-	strlcpy(*expted, r_str[0], len_r_str[0]);
-	strlcpy(*rslt, r_str[0], len_r_str[0]);
-	strlcat(*expted, r_str[1], total_len);
-	ft_strlcat(*rslt, r_str[1], total_len);
+	expted = strncmp(r_str[0], r_str[1], strlen())
 }
 
-int	test_ft_strlcat(void)
+int	test_ft_strlcmp(void)
 {
 	t_test	test;
 	char	*r_str[2];
