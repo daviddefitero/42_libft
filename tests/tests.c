@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:31:46 by david             #+#    #+#             */
-/*   Updated: 2025/09/29 15:46:04 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/09/30 17:36:50 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,46 +30,18 @@ void	ft_init_test(t_test *test)
 	test->fail = 0;
 }
 
-void	ft_check_str(t_test *test, char *expted, char *rslt, t_size len)
+int	ft_max_value(int a, int b)
 {
-	if (strncmp(expted, rslt, len) == 0)
-	{
-		test->pass++;
-		printf("** ✅ TEST Nº%d: %s == %s\n\n", test->t_n, expted, rslt);
-	}
-	else
-	{
-		test->fail++;
-		printf("** ❌ TEST Nº%d: %s != %s\n\n", test->t_n, expted, rslt);
-	}
+	if (a > b)
+		return (a);
+	return (b);
 }
 
-void	ft_check_int(t_test *test, int expted, int rslt)
+int	ft_min_value(int a, int b)
 {
-	if (expted == rslt)
-	{
-		test->pass++;
-		printf("** ✅ TEST Nº%d: %d == %d\n\n", test->t_n, expted, rslt);
-	}
-	else
-	{
-		test->fail++;
-		printf("** ❌ TEST Nº%d: %d != %d\n\n", test->t_n, expted, rslt);
-	}
-}
-
-void	ft_check_boolean(t_test *test, int expted, int rslt)
-{
-	if ((expted && rslt) || (!expted && !rslt))
-	{
-		test->pass++;
-		printf("** ✅ TEST Nº%d: %d == %d\n\n", test->t_n, expted, rslt);
-	}
-	else
-	{
-		test->fail++;
-		printf("** ❌ TEST Nº%d: %d != %d\n\n", test->t_n, expted, rslt);
-	}
+	if (a < b)
+		return (a);
+	return (b);
 }
 
 static void	ft_print_header(void)
@@ -79,8 +51,12 @@ static void	ft_print_header(void)
 	printf("***********************************************\n\n");
 	printf("* Select a function:\n");
 	printf("\n--------------- LIBC FUNCTIONS ----------------\n");
-	printf("** 1. ft_strlen\n** 2. ft_strlcpy\n** 3. ft_strlcat\n");
-	printf("** 4. ft_isalpha\n** 0. Exit\n");
+	printf("** 1. isalpha\n** 2. isdigit\n** 3. isalnum\n** 4. isascii\n");
+	printf("** 5.  isprint\n** 6. strlen\n** 7. memset\n** 8. bzeros\n");
+	printf("** 9. memcpy\n** 10. memmove\n** 11. strlcpy\n** 12. strlcat\n");
+	printf("** 13. toupper\n** 14. tolower\n** 15. strchr\n** 16. strncmp\n");
+	printf("** 18. memchr\n** 19. memcmp\n** 20. strnstr\n** 21. atoi");
+	printf("** 22. calloc\n** 23. strdup\n** 0. Exit\n");
 	printf("\n***** ----> ");
 }
 
@@ -95,12 +71,18 @@ int	main(void)
 		ft_print_header();
 		scanf("%d", &usr_choice);
 		if (usr_choice == 1)
-			test_ft_strlen();
-		else if (usr_choice == 2)
-			test_ft_strlcpy();
-		else if (usr_choice == 3)
-			test_ft_strlcat();
+			test_ft_isalpha();
+		// else if (usr_choice == 2)
+		// 	
+		// else if (usr_choice == 3)
+		// 	
 		else if (usr_choice == 4)
 			test_ft_isalpha();
+		else if (usr_choice == 5)
+			test_ft_strncmp();
+		else if (usr_choice == 6)
+			test_ft_strchr();
+		else if (usr_choice == 7)
+			test_ft_isdigit();
 	}
 }

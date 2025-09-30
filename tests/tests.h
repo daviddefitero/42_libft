@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 00:07:42 by david             #+#    #+#             */
-/*   Updated: 2025/09/29 15:49:51 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/09/30 16:02:39 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,21 @@ typedef struct s_test
 
 void	ft_init_test(t_test *test);
 int		ft_get_nbr_test(void);
-void	ft_check_str(t_test *test, char *expted, char *rslt, t_size len);
 void	ft_check_int(t_test *test, int expted, int rslt);
+void	ft_check_char(t_test *test, char expted, char rslt);
+void	ft_check_str(t_test *test, char *expted, char *rslt, size_t len);
 void	ft_check_boolean(t_test *test, int expted, int rslt);
 
 int		ft_randnbr(int max);
+char	ft_randchar(void);
 char	*ft_randstr(int max);
+
+int		ft_max_value(int a, int b);
+int		ft_min_value(int a, int b);
 
 int		test_ft_strlen(void);
 int		test_ft_strlcpy(void);
 int		test_ft_strlcat(void);
 int		test_ft_isalpha(void);
 int		test_ft_strncmp(void);
+int		test_ft_strchr(void);

@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 21:51:29 by david             #+#    #+#             */
-/*   Updated: 2025/09/29 15:26:27 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/09/30 16:02:39 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static void	ft_get_values(char *r_str[2], char **expted, char **rslt)
 {
-	t_size	len_r_str[2];
-	t_size	total_len;
+	size_t	len_r_str[2];
+	size_t	total_len;
 	int		i;
 
 	i = 0;

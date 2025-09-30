@@ -6,24 +6,27 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/09/29 15:16:20 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/09/30 16:31:37 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef __SIZE_TYPE__	t_size;
+#include <stdlib.h>
 
 /* ********** Libc FUNCTIONS ********** */
 
 /* ------ No external functions ------- */
 // • isalpha
-int		ft_isalpha(int c);
+int		ft_isalpha(int c); // TEST INCLUDED
+
 // • isdigit
+int		ft_isdigit(int c);
+
 // • isalnum
 // • isascii
 // • isprint
 
 // • strlen
-t_size	ft_strlen(const char *s);
+size_t	ft_strlen(const char *s); // TEST INCLUDED
 
 // • memset
 // • bzero
@@ -31,28 +34,28 @@ t_size	ft_strlen(const char *s);
 // • memmove
 
 // • strlcpy
-t_size	ft_strlcpy(char *dst, const char *src, t_size size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size); // TEST INCLUDED
 
 // • strlcat
-t_size	ft_strlcat(char *dst, const char *src, t_size size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size); // TEST INCLUDED
 
 // • toupper
 // • tolower
 
 // • strchr
-char	*ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c); // TEST INCLUDED
 
 // • strrchr
 
 // • strncmp
-int		ft_strncmp(const char *s1, const char *s2, t_size n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n); // TEST INCLUDED
 
 // • memchr
 // • memcmp
 // • strnstr
 
 // • atoi
-int		ft_atoi(const char *nptr);
+int		ft_atoi(const char *nptr); // UNFINIShED
 
 /* --------- “malloc” allowed --------- */
 // • calloc

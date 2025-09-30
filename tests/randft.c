@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_randstr.c                                       :+:      :+:    :+:   */
+/*   randft.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/16 00:48:59 by david             #+#    #+#             */
-/*   Updated: 2025/09/29 15:26:41 by dde-fite         ###   ########.fr       */
+/*   Created: 2025/09/30 13:09:52 by dde-fite          #+#    #+#             */
+/*   Updated: 2025/09/30 13:19:23 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
+
+int	ft_randnbr(int max)
+{
+	return (rand() % (max + 1));
+}
+
+char	ft_randchar(void)
+{
+	return (ft_randnbr(126));
+}
 
 char	*ft_randstr(int max)
 {

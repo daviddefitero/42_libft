@@ -6,13 +6,13 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 23:14:06 by david             #+#    #+#             */
-/*   Updated: 2025/09/29 12:46:15 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/09/30 16:02:39 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_size	ft_strlcpy(char *dst, const char *src, t_size size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	char	*t_src;
 

@@ -1,40 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_strlen.c                                   :+:      :+:    :+:   */
+/*   test_ft_strchr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 22:29:38 by david             #+#    #+#             */
-/*   Updated: 2025/09/30 16:33:45 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/09/30 16:14:50 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../tests.h"
 
-int	test_ft_strlen(void)
+size_t static	ft_get_len(char *a, char *b)
+{
+	if (a == NULL || b == NULL)
+		return (0);
+	return (ft_max_value(strlen(a), strlen(b)));
+}
+
+int	test_ft_strchr(void)
 {
 	t_test	test;
+	char	r_char;
 	char	*r_str;
-	size_t	expted;
-	size_t	rslt;
+	char	*expted;
+	char	*rslt;
 
 	ft_init_test(&test);
-	printf("\n------ * Testing ft_strlen for %d times * ------\n", test.n);
+	printf("\n------ * Testing ft_strchr for %d times * ------\n", test.n);
 	while (test.n >= test.t_n)
 	{
 		r_str = ft_randstr(20);
-		expted = strlen(r_str);
-		rslt = ft_strlen(r_str);
+		r_char = ft_randchar();
+		expted = strchr(r_str, r_char);
+		rslt = ft_strchr(r_str, r_char);
 		printf("** TEST Nº%d -------------\n", test.t_n);
 		printf("** String:\n** BEGIN STRING\n%s\n** END STRING\n", r_str);
-		printf("\n** Expected: %ld\n", expted);
-		printf("** ft_strlen: %ld\n", rslt);
-		ft_check_int(&test, expted, rslt);
+		printf("** Char to find: %c\n", r_char);
+		printf("\n** Expected: %s\n", expted);
+		printf("** ft_strlen: %s\n", rslt);
+		ft_check_str(&test, expted, rslt, ft_get_len(expted, rslt));
 		printf("* -----------------------\n");
 		test.t_n++;
 		free(r_str);
 	}
-	printf("* ft_strlen: ✅ %d ❌ %d\n", test.pass, test.fail);
+	printf("* ft_strchr: ✅ %d ❌ %d\n", test.pass, test.fail);
 	return (test.fail);
 }
