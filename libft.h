@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/09/30 16:31:37 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/01 17:29:01 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,16 @@
 int		ft_isalpha(int c); // TEST INCLUDED
 
 // • isdigit
-int		ft_isdigit(int c);
+int		ft_isdigit(int c); // TEST INCLUDED
 
 // • isalnum
+int		ft_isalnum(int c); // TEST INCLUDED
+
 // • isascii
+int		ft_isascii(int c); // TEST INCLUDED
+
 // • isprint
+int		ft_isprint(int c); // TEST INCLUDED
 
 // • strlen
 size_t	ft_strlen(const char *s); // TEST INCLUDED
@@ -40,12 +45,16 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size); // TEST INCLUDED
 size_t	ft_strlcat(char *dst, const char *src, size_t size); // TEST INCLUDED
 
 // • toupper
+int		ft_toupper(int c); // TEST INCLUDED
+
 // • tolower
+int		ft_tolower(int c); // TEST INCLUDED
 
 // • strchr
 char	*ft_strchr(const char *s, int c); // TEST INCLUDED
 
 // • strrchr
+char	*ft_strrchr(const char *s, int c);
 
 // • strncmp
 int		ft_strncmp(const char *s1, const char *s2, size_t n); // TEST INCLUDED

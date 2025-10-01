@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 00:07:42 by david             #+#    #+#             */
-/*   Updated: 2025/09/30 16:02:39 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/01 16:52:15 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,16 @@ char	*ft_randstr(int max);
 int		ft_max_value(int a, int b);
 int		ft_min_value(int a, int b);
 
+int		test_ft_isalpha(void);
+int		test_ft_isdigit(void);
+int		test_ft_isalnum(void);
+int		test_ft_isascii(void);
+int		test_ft_isprint(void);
 int		test_ft_strlen(void);
 int		test_ft_strlcpy(void);
 int		test_ft_strlcat(void);
+int		test_ft_toupper(void);
+int		test_ft_tolower(void);
 int		test_ft_isalpha(void);
 int		test_ft_strncmp(void);
 int		test_ft_strchr(void);

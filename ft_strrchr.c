@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 16:31:44 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/01 13:57:49 by dde-fite         ###   ########.fr       */
+/*   Created: 2025/10/01 17:28:41 by dde-fite          #+#    #+#             */
+/*   Updated: 2025/10/01 17:58:11 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "tests.h"
+// EN PROGRESO
+char	*ft_strrchr(const char *s, int c)
 {
-	return (c >= '0' && c <= '9');
+	char	*t_s;
+
+	t_s = s;
+	while (*t_s)
+	{
+		if (*t_s == c)
+			return (t_s);
+		t_s++;
+	}
+	return (NULL);
 }

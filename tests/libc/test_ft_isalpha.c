@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 15:30:59 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/09/30 13:18:52 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/01 15:25:01 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ int	test_ft_isalpha(void)
 	printf("\n------ * Testing ft_isalpha for %d times * ------\n", test.n);
 	while (test.n >= test.t_n)
 	{
-		r_char = ft_randchar();
+		r_char = ft_randnbr(255);
 		expted = isalpha(r_char);
 		rslt = ft_isalpha(r_char);
 		printf("** TEST Nº%d -------------\n", test.t_n);
 		printf("** Char: %c\n", r_char);
 		printf("\n** Expected: %d\n", expted);
-		printf("** ft_strlen: %d\n", rslt);
+		printf("** ft_isalpha: %d\n", rslt);
 		ft_check_boolean(&test, expted, rslt);
 		printf("* -----------------------\n");
 		test.t_n++;
