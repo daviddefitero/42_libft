@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_strchr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 22:29:38 by david             #+#    #+#             */
-/*   Updated: 2025/09/30 16:14:50 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/01 21:07:59 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../tests.h"
 
-size_t static	ft_get_len(char *a, char *b)
+static size_t	ft_get_len(char *a, char *b)
 {
 	if (a == NULL || b == NULL)
 		return (0);

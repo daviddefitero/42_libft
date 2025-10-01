@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 17:28:41 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/01 17:58:11 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/01 21:08:20 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tests.h"
+#include "libft.h"
 // EN PROGRESO
 char	*ft_strrchr(const char *s, int c)
 {
