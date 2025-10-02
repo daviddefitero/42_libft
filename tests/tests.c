@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:31:46 by david             #+#    #+#             */
-/*   Updated: 2025/10/01 17:26:50 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/02 16:31:14 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void	ft_print_header(void)
 	printf("** 1. isalpha\n** 2. isdigit\n** 3. isalnum\n** 4. isascii\n");
 	printf("** 5. isprint\n** 6. strlen\n// 7. memset\n// 8. bzeros\n");
 	printf("// 9. memcpy\n// 10. memmove\n** 11. strlcpy\n** 12. strlcat\n");
-	printf("** 13. toupper\n** 14. tolower\n** 15. strchr\n// 16. strrchr\n");
+	printf("** 13. toupper\n** 14. tolower\n** 15. strchr\n** 16. strrchr\n");
 	printf("** 17. strncmp\n// 18. memchr\n// 19. memcmp\n// 20. strnstr\n");
 	printf("// 21. atoi\n// 22. calloc\n// 23. strdup\n** 0. Exit\n");
 	printf("\n***** ----> ");
@@ -93,6 +93,8 @@ int	main(void)
 		else if (usr_choice == 15)
 			test_ft_strchr();
 		else if (usr_choice == 16)
+			test_ft_strrchr();
+		else if (usr_choice == 17)
 			test_ft_strncmp();
 	}
 }

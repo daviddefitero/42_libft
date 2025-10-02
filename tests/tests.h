@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 00:07:42 by david             #+#    #+#             */
-/*   Updated: 2025/10/01 16:52:15 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/02 16:30:18 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,3 +50,4 @@ int		test_ft_tolower(void);
 int		test_ft_isalpha(void);
 int		test_ft_strncmp(void);
 int		test_ft_strchr(void);
+int		test_ft_strrchr(void);
