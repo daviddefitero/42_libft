@@ -6,11 +6,12 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/02 16:48:52 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/02 17:09:21 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <string.h>
 
 /* ********** Libc FUNCTIONS ********** */
 
@@ -34,7 +35,7 @@ int		ft_isprint(int c); // TEST INCLUDED
 size_t	ft_strlen(const char *s); // TEST INCLUDED
 
 // • memset
-
+void	*memset(void *s, int c, size_t n);
 
 // • bzero
 // • memcpy
