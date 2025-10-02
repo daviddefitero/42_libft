@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/01 17:29:01 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/02 16:48:52 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int		ft_isprint(int c); // TEST INCLUDED
 size_t	ft_strlen(const char *s); // TEST INCLUDED
 
 // • memset
+
+
 // • bzero
 // • memcpy
 // • memmove
@@ -54,7 +56,7 @@ int		ft_tolower(int c); // TEST INCLUDED
 char	*ft_strchr(const char *s, int c); // TEST INCLUDED
 
 // • strrchr
-char	*ft_strrchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c); // TEST INCLUDED
 
 // • strncmp
 int		ft_strncmp(const char *s1, const char *s2, size_t n); // TEST INCLUDED
