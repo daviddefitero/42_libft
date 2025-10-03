@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/02 19:59:12 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/03 19:13:43 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 
 // • memcpy
+void	*memcpy(void *dest, const void *src, size_t n);
+
 // • memmove
 
 // • strlcpy
@@ -78,9 +80,29 @@ int		ft_atoi(const char *nptr); // UNFINIShED
 
 /* ******* ADDITIONAL FUNCTIONS ******* */
 
-// itoa - IN PROGRESS
+// ft_substr
+
+// ft_strjoin
+
+// ft_strtrim
+
+// ft_split
+
+// ft_itoa - IN PROGRESS
 char	*ft_itoa(int n);
+
+// ft_strmapi
+
+// ft_striteri
+
+// ft_putchar_fd - REVISAR
 void	ft_putchar_fd(char c, int fd);
+
+// ft_putstr_fd - REVISAR
 void	ft_putstr_fd(char *s, int fd);
+
+// ft_putendl_fd - REVISAR
 void	ft_putendl_fd(char *s, int fd);
+
+// ft_putnbr_fd - REVISAR
 void	ft_putnbr_fd(int n, int fd);

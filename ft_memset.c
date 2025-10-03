@@ -6,12 +6,12 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 17:09:27 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/02 19:52:56 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/03 19:46:07 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// s
 #include "libft.h"
+#include <stdio.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
@@ -23,31 +23,16 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-// int main(void)
-// {
-// 	int		nums[10];
-// 	char	ltr[] = "abcdefghijk";
-// 	int		i;
+int	main(void)
+{
+	char	*a;
+	int		*b;
 
-// 	i = 0;
-// 	while (i < 10)
-// 	{
-// 		nums[i] = i;
-// 		i++;
-// 	}
-// 	i = 0;
-// 	while (i < 10)
-// 		printf("%d", nums[i++]);
-// 	printf("\n");
-// 	printf("%s", ltr);
-// 	printf("\n");
-// 	ft_memset(nums, 7, sizeof(int) * 3);
-// 	ft_memset(ltr, '&', 5);
-// 	i = 0;
-// 	while (i < 10)
-// 		printf("%d", nums[i++]);
-// 	printf("\n");
-// 	printf("%s", ltr);
-// 	printf("\n");
-// 	return (0);
-// }
+	a = malloc(1000 * sizeof(char));
+	b = malloc(20 * sizeof(int));
+	ft_memset(a, 'J', 1000);
+	ft_memset(b, 3, 20);
+	printf("String A(char): %s", a);
+	printf("String B(int): %d", b);
+	return (0);
+}
