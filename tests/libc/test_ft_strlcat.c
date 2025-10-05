@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_strlcat.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 21:51:29 by david             #+#    #+#             */
-/*   Updated: 2025/10/02 16:33:42 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/05 23:27:28 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,33 +34,30 @@ static void	ft_get_values(char *r_str[2], char **expted, char **rslt)
 	ft_strlcat(*rslt, r_str[1], total_len);
 }
 
-int	test_ft_strlcat(void)
+t_test	test_ft_strlcat(void)
 {
 	t_test	test;
 	char	*r_str[2];
 	char	*expted;
 	char	*rslt;
 
-	ft_init_test(&test);
-	printf("\n------ * Testing ft_strlcat for %d times * ------\n", test.n);
+	ft_init_test(&test, "ft_strlcat");
 	while (test.n >= test.t_n)
 	{
 		ft_get_values(r_str, &expted, &rslt);
-		printf("** TEST Nº%d -------------\n", test.t_n);
-		printf("** String 1:\n** BEGIN STRING\n%s\n** END STRING\n\n",
-			r_str[0]);
-		printf("** String 2:\n** BEGIN STRING\n%s\n** END STRING\n\n",
-			r_str[1]);
-		printf("** Expected:\n** BEGIN STRING\n%s\n** END STRING\n\n", expted);
-		printf("** ft_strlcat:\n** BEGIN STRING\n%s\n** END STRING\n\n", rslt);
+		printf("╭─ TEST #%d ─────────────────────────────────╮\n"
+			"│ String 1:\n│ BEGIN STRING\n│ %s\n│ END STRING\n│\n"
+			"│ String 2:\n│ BEGIN STRING\n│ %s\n│ END STRING\n│\n"
+			"│ Expected:\n│ BEGIN STRING\n│ %s\n│ END STRING\n│\n"
+			"│ %s:\n│ BEGIN STRING\n│ %s\n│ END STRING\n│\n",
+			test.t_n, r_str[0], r_str[1], expted, test.fn_name, rslt);
 		ft_check_str(&test, expted, rslt, strlen(expted));
-		printf("* -----------------------\n");
+		printf("╰───────────────────────────────────────────╯\n");
 		test.t_n++;
 		free(r_str[0]);
 		free(r_str[1]);
 		free(expted);
 		free(rslt);
 	}
-	printf("* ft_strlcat: ✅ %d ❌ %d\n", test.pass, test.fail);
-	return (test.fail);
+	return (test);
 }

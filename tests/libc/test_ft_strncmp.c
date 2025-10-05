@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_strncmp.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 15:48:31 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/09/30 16:33:56 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/05 23:30:31 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,31 +30,28 @@ static void	ft_get_values(char *r_str[2], int *expted, int *rslt)
 	*rslt = ft_strncmp(r_str[0], r_str[1], max_len);
 }
 
-int	test_ft_strncmp(void)
+t_test	test_ft_strncmp(void)
 {
 	t_test	test;
 	char	*r_str[2];
 	int		expted;
 	int		rslt;
 
-	ft_init_test(&test);
-	printf("\n------ * Testing ft_strncmp for %d times * ------\n", test.n);
+	ft_init_test(&test, "ft_strncmp");
 	while (test.n >= test.t_n)
 	{
 		ft_get_values(r_str, &expted, &rslt);
-		printf("** TEST Nº%d -------------\n", test.t_n);
-		printf("** String 1:\n** BEGIN STRING\n%s\n** END STRING\n\n",
-			r_str[0]);
-		printf("** String 2:\n** BEGIN STRING\n%s\n** END STRING\n\n",
-			r_str[1]);
-		printf("** Expected: %d\n", expted);
-		printf("** ft_strlcat: %d\n", rslt);
+		printf("╭─ TEST #%d ─────────────────────────────────╮\n"
+			"│ String 1:\n│ BEGIN STRING\n│ %s\n│ END STRING\n│\n"
+			"│ String 2:\n│ BEGIN STRING\n│ %s\n│ END STRING\n│\n"
+			"│ Expected: %d\n"
+			"│ %s: %d\n", test.t_n, r_str[0], r_str[1], expted,
+			test.fn_name, rslt);
 		ft_check_int(&test, expted, rslt);
-		printf("* -----------------------\n");
+		printf("╰───────────────────────────────────────────╯\n");
 		test.t_n++;
 		free(r_str[0]);
 		free(r_str[1]);
 	}
-	printf("* ft_strncmp: ✅ %d ❌ %d\n", test.pass, test.fail);
-	return (test.fail);
+	return (test);
 }

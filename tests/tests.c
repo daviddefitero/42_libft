@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tests.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:31:46 by david             #+#    #+#             */
-/*   Updated: 2025/10/02 16:31:14 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/05 23:34:39 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,23 @@ int	ft_get_nbr_test(void)
 {
 	int	nbr;
 
-	printf("How many tests do you want per function?: ");
+	printf("➤ Enter the number of tests: ");
 	scanf("%d", &nbr);
 	return (nbr);
 }
 
-void	ft_init_test(t_test *test)
+void	ft_init_test(t_test *test, char *fn_name)
 {
+	printf("\n➤ Selected Function: %s\n\n", fn_name);
+	test->fn_name = fn_name;
 	test->n = ft_get_nbr_test();
 	test->t_n = 1;
 	test->pass = 0;
 	test->fail = 0;
+	printf("\n╔═══════════════════════════════════════════╗\n"
+		"║          Testing %s (x%d)          ║\n"
+		"╚═══════════════════════════════════════════╝\n\n",
+		test->fn_name, test->n);
 }
 
 int	ft_max_value(int a, int b)
@@ -46,23 +52,36 @@ int	ft_min_value(int a, int b)
 
 static void	ft_print_header(void)
 {
-	printf("\n***********************************************\n");
-	printf("***************** LIBFT TEST ******************\n");
-	printf("***********************************************\n\n");
-	printf("* Select a function:\n");
-	printf("\n--------------- LIBC FUNCTIONS ----------------\n");
-	printf("** 1. isalpha\n** 2. isdigit\n** 3. isalnum\n** 4. isascii\n");
-	printf("** 5. isprint\n** 6. strlen\n// 7. memset\n// 8. bzeros\n");
-	printf("// 9. memcpy\n// 10. memmove\n** 11. strlcpy\n** 12. strlcat\n");
-	printf("** 13. toupper\n** 14. tolower\n** 15. strchr\n** 16. strrchr\n");
-	printf("** 17. strncmp\n// 18. memchr\n// 19. memcmp\n// 20. strnstr\n");
-	printf("// 21. atoi\n// 22. calloc\n// 23. strdup\n** 0. Exit\n");
-	printf("\n***** ----> ");
+	printf("\n**************************************************************\n"
+		"╔════════════════════════════════════════════════════════════╗\n"
+		"║                    L I B F T   T E S T                     ║\n"
+		"╚════════════════════════════════════════════════════════════╝\n"
+		"                       d d e - f i t e\n"
+		"**************************************************************\n\n\n"
+		"For now, functions designed to directly modify the value of\n"
+		"their arguments do not have return verification in the tests.\n\n"
+		"» Select a function:\n"
+		"\n╭───────────── LIBC FUNCTIONS ──────────────╮\n"
+		"│ **  1. isalpha       **  2. isdigit       │\n"
+		"│ **  3. isalnum       **  4. isascii       │\n"
+		"│ **  5. isprint       **  6. strlen        │\n"
+		"│ //  7. memset        //  8. bzero         │\n"
+		"│ //  9. memcpy        // 10. memmove       │\n"
+		"│ ** 11. strlcpy       ** 12. strlcat       │\n"
+		"│ ** 13. toupper       ** 14. tolower       │\n"
+		"│ ** 15. strchr        ** 16. strrchr       │\n"
+		"│ ** 17. strncmp       // 18. memchr        │\n"
+		"│ // 19. memcmp        // 20. strnstr       │\n"
+		"│ // 21. atoi          // 22. calloc        │\n"
+		"│ **  0. Exit                               │\n"
+		"╰───────────────────────────────────────────╯\n"
+		"\n***** --------> ");
 }
 
 int	main(void)
 {
-	int	usr_choice;
+	int		usr_choice;
+	t_test	test;
 
 	srand(time(NULL));
 	usr_choice = 1;
@@ -71,30 +90,37 @@ int	main(void)
 		ft_print_header();
 		scanf("%d", &usr_choice);
 		if (usr_choice == 1)
-			test_ft_isalpha();
+			test = test_ft_isalpha();
 		else if (usr_choice == 2)
-			test_ft_isdigit();
+			test = test_ft_isdigit();
 		else if (usr_choice == 3)
-			test_ft_isalnum();
+			test = test_ft_isalnum();
 		else if (usr_choice == 4)
-			test_ft_isascii();
+			test = test_ft_isascii();
 		else if (usr_choice == 5)
-			test_ft_isprint();
+			test = test_ft_isprint();
 		else if (usr_choice == 6)
-			test_ft_strlen();
+			test = test_ft_strlen();
 		else if (usr_choice == 11)
-			test_ft_strlcpy();
+			test = test_ft_strlcpy();
 		else if (usr_choice == 12)
-			test_ft_strlcat();
+			test = test_ft_strlcat();
 		else if (usr_choice == 13)
-			test_ft_toupper();
+			test = test_ft_toupper();
 		else if (usr_choice == 14)
-			test_ft_tolower();
+			test = test_ft_tolower();
 		else if (usr_choice == 15)
-			test_ft_strchr();
+			test = test_ft_strchr();
 		else if (usr_choice == 16)
-			test_ft_strrchr();
+			test = test_ft_strrchr();
 		else if (usr_choice == 17)
-			test_ft_strncmp();
+			test = test_ft_strncmp();
+		if (test.fn_name != NULL)
+			printf("\n╔══════════════════════════════╗\n"
+				"║ Summary (%s)         ║\n"
+				"║ ✅ Passed: %d                 ║\n"
+				"║ ❌ Failed: %d                 ║\n"
+				"╚══════════════════════════════╝\n",
+				test.fn_name, test.pass, test.fail);
 	}
 }

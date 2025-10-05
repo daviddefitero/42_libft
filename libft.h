@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/03 19:13:43 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/05 14:43:14 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	*memcpy(void *dest, const void *src, size_t n);
 
 // • memmove
 
+// TODO: Revisar en tests los returns
 // • strlcpy
 size_t	ft_strlcpy(char *dst, const char *src, size_t size); // TEST INCLUDED
 
