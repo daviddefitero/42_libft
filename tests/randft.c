@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:09:52 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/02 16:38:06 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/06 19:14:16 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ char	*ft_randstr(int max)
 	r_nbr = ft_randnbr(max);
 	_str = malloc(r_nbr);
 	t_str = _str;
-	while (max-- > 2)
-		*(t_str)++ = ft_randnbr(126);
+	while (r_nbr-- > 2)
+		*(t_str)++ = ft_randchar();
 	*t_str = '\0';
 	return (_str);
 }
