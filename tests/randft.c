@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   randft.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:09:52 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/06 19:14:16 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/07 21:56:50 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 int	ft_randnbr(int max)
 {
 	return (rand() % (max + 1));
+}
+
+int	ft_randnbr_range(int min, int max)
+{
+	if (min > max)
+		return (-1);
+	return (rand() % (max - min + 1) + min);
 }
 
 char	ft_randchar(void)
