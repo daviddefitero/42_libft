@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 23:14:06 by david             #+#    #+#             */
-/*   Updated: 2025/10/03 18:55:00 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/07 22:23:55 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	char	*t_src;
+	const char	*_s = src;
 
-	if (size < 1)
-		return (ft_strlen(src));
-	t_src = (char *)src;
-	while (size-- > 0 && *t_src)
-		*(dst++) = *(t_src++);
-	dst = "\0";
-	return (ft_strlen(src));
+	if (size > 0)
+	{
+		while (size-- > 1 && *src)
+			*(dst++) = *(src++);
+		*dst = '\0';
+	}
+	return (ft_strlen(_s));
 }
