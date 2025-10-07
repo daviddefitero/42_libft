@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 00:07:42 by david             #+#    #+#             */
-/*   Updated: 2025/10/05 23:23:09 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/07 21:57:04 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	ft_check_str(t_test *test, char *expted, char *rslt, size_t len);
 void	ft_check_boolean(t_test *test, int expted, int rslt);
 
 int		ft_randnbr(int max);
+int		ft_randnbr_range(int min, int max);
 char	ft_randchar(void);
 char	*ft_randstr(int max);
 
