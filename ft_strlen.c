@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 22:29:38 by david             #+#    #+#             */
-/*   Updated: 2025/09/30 16:02:39 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/07 22:14:09 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 size_t	ft_strlen(const char *s)
 {
-	const char	*t_s;
+	const char	*_s = s;
 
-	t_s = s;
-	while (*t_s)
-		t_s++;
-	return (t_s - s);
+	while (*s)
+		s++;
+	return (s - _s);
 }
