@@ -3,44 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 23:49:23 by david             #+#    #+#             */
-/*   Updated: 2025/10/06 20:12:52 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/07 22:44:19 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <bsd/string.h>
+#include <bsd/string.h>
+#include <stdio.h>
+
 // TODO Revisar errores en algunos casos
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char		*t_src;
-	size_t		dst_len;
+	const size_t		dst_len = ft_strlen(dst);
 
-	if (size < 1)
-		return (size);
-	dst_len = ft_strlen(dst);
-	if (dst_len >= size)
-		return (ft_strlen(src) + dst_len);
-	t_src = (char *)src;
-	while (*dst)
-		dst++;
-	ft_strlcpy(dst, t_src, size);
+	if (size <= dst_len)
+		return (size + ft_strlen(src));
+	ft_strlcpy(dst + dst_len, src, size - dst_len);
 	return (dst_len + ft_strlen(src));
 }
 
 // int	main(void)
 // {
-// 	char	*a = "";
-// 	char	*b = "Hola buenas";
-// 	char	*exptd[20];
-// 	char	*rstl[20];
+// 	const char	*a = " ";
+// 	const char	*b = "Hola buenas";
+// 	char		exptd[20];
+// 	char		rstl[20];
 
-// 	ft_strlcpy(exptd, a, 0);
-// 	ft_strlcpy(rstl, a, 0);
+// 	ft_strlcpy(exptd, a, strlen(a));
+// 	ft_strlcpy(rstl, a, strlen(a));
 // 	strlcat(exptd, b, 12);
 // 	ft_strlcat(rstl, b, 12);
-// 	printf("%s", exptd);
-// 	printf("%s", rstl);
+// 	printf("%s\n", exptd);
+// 	printf("%s\n", rstl);
 // }
