@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/08 16:20:13 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/08 16:45:01 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,10 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n); // TEST INCLUDED
 void	*ft_memchr(const void *s, int c, size_t n);
 
 // • memcmp
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
 // • strnstr
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 // • atoi
 int		ft_atoi(const char *nptr); // UNFINIShED
