@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/08 15:10:46 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/08 16:20:13 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ char	*ft_strrchr(const char *s, int c); // TEST INCLUDED
 int		ft_strncmp(const char *s1, const char *s2, size_t n); // TEST INCLUDED
 
 // • memchr
+void	*ft_memchr(const void *s, int c, size_t n);
+
 // • memcmp
 // • strnstr
 
@@ -90,7 +92,7 @@ int		ft_atoi(const char *nptr); // UNFINIShED
 
 // ft_split
 
-// ft_itoa - IN PROGRESS
+// ft_itoa - UNFINISHED
 char	*ft_itoa(int n);
 
 // ft_strmapi
@@ -106,5 +108,5 @@ void	ft_putstr_fd(char *s, int fd);
 // ft_putendl_fd - REVISAR
 void	ft_putendl_fd(char *s, int fd);
 
-// ft_putnbr_fd - REVISAR
+// ft_putnbr_fd - UNFINISHED
 void	ft_putnbr_fd(int n, int fd);
