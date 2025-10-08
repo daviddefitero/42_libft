@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 21:36:10 by david             #+#    #+#             */
-/*   Updated: 2025/09/30 14:53:00 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/08 14:29:39 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*t_s;
-
-	t_s = (char *)s;
-	while (*t_s)
+	while (*s)
 	{
-		if (*t_s == c)
-			return (t_s);
-		t_s++;
+		if (*s == c)
+			return ((char *)s);
+		s++;
 	}
 	return (NULL);
 }

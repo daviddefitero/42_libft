@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 23:49:23 by david             #+#    #+#             */
-/*   Updated: 2025/10/07 22:44:19 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/08 14:30:21 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <bsd/string.h>
-#include <stdio.h>
 
 // TODO Revisar errores en algunos casos
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
