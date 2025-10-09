@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 15:11:00 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/08 16:15:55 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/09 19:17:30 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	const void	*_dest = dest;
-
+	if (!dest && !src)
+		return (NULL);
 	if (dest > src)
-		while (n-- > 0 && *(uint8_t *)src)
+		while (n-- > 0)
 			((uint8_t *)dest)[n] = ((uint8_t *)src)[n];
 	else
-		while (n-- > 0 && *(uint8_t *)src)
-			*((uint8_t *)dest++) = *((uint8_t *)src++);
-	return ((void *)_dest);
+		ft_memcpy(dest, src, n);
+	return (dest);
 }
 
 // int	main(void)
@@ -37,7 +36,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // 	printf("second string :%s\n ", str);
 // 	memcpy(first + 8, first, 10);
 // 	printf("memcpy overlap : %s\n ", first);
-// 	ft_memmove(second + 8, second, 10);
+// 	ft_memmove(second + 8, NULL, 10);
 // 	printf("memmove overlap : %s\n ", second);
 // 	return (0);
 // }

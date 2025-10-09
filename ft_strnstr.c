@@ -1,36 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/02 17:09:27 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/09 18:43:54 by dde-fite         ###   ########.fr       */
+/*   Created: 2025/10/08 16:46:07 by dde-fite          #+#    #+#             */
+/*   Updated: 2025/10/09 15:30:18 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	const void	*_dest = dest;
-
-	if (!dest && !src)
-		return (NULL);
-	while (n-- > 0)
-		*((uint8_t *)dest++) = *((uint8_t *)src++);
-	return ((void *)_dest);
-}
-
-// int	main(void)
+// char	*ft_strnstr(const char *big, const char *little, size_t len)
 // {
-// 	char		*a;
-// 	const char	b[12] = "Hola world!";
-
-// 	a = malloc(1000 * sizeof(char));
-// 	ft_memcpy(a, b, 1000);
-// 	printf("String A(char): %s", a);
-// 	free(a);
-// 	return (0);
+	
 // }
