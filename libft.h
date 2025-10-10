@@ -6,17 +6,21 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/09 18:43:52 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/10 17:55:53 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdint.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <stdlib.h>
+# include <string.h>
+# include <stdint.h>
+# include <limits.h>
 
 /* ********** Libc FUNCTIONS ********** */
 
-/* ------ No external functions ------- */
+/* --- No external functions allwd ---- */
 // • isalpha
 int		ft_isalpha(int c); // TEST INCLUDED
 
@@ -45,10 +49,8 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 // • memmove
-// ARREGLAR ERRORES
 void	*ft_memmove(void *dest, const void *src, size_t n);
 
-// TODO: Revisar en tests los returns
 // • strlcpy
 size_t	ft_strlcpy(char *dst, const char *src, size_t size); // TEST INCLUDED
 
@@ -77,13 +79,15 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 // • strnstr
-char	*ft_strnstr(const char *big, const char *little, size_t len); // UNFINISHED
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 // • atoi
-int		ft_atoi(const char *nptr); // UNFINIShED
+int		ft_atoi(const char *nptr);
 
 /* --------- “malloc” allowed --------- */
 // • calloc
+void	*ft_calloc(size_t nmemb, size_t size);
+
 // • strdup
 
 /* ******* ADDITIONAL FUNCTIONS ******* */
@@ -113,4 +117,6 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 
 // ft_putnbr_fd - UNFINISHED
-void	ft_putnbr_fd(int n, int fd);
+//void	ft_putnbr_fd(int n, int fd);
+
+#endif
