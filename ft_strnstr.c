@@ -6,13 +6,11 @@
 /*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 16:46:07 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/10 16:42:08 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/10 17:04:43 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <bsd/string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -43,19 +41,4 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	// 	size_t max = strlen(big);
 
 // 	printf("%s", strnstr(big, little, max));
-// }
-
-// 	int	main(void)
-// {
-// 	char	*big = "abcdef";
-// 	char	*little = "abcdefghijklmnop";
-// 	size_t	max = strlen(big);
-// 	char	*s1 = strnstr(big, little, max);
-// 	char	*s2 = ft_strnstr(big, little, max);
-
-// 	if (s1 == s2)
-// 	{
-// 		printf("✅");
-// 		return (0);
-// 	printf("❌");
 // }
