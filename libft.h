@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/11 23:19:11 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/11 23:29:00 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,16 +110,16 @@ char	*ft_itoa(int n);
 
 // ft_striteri
 
-// ft_putchar_fd - REVISAR
+// ft_putchar_fd
 void	ft_putchar_fd(char c, int fd);
 
-// ft_putstr_fd - REVISAR
+// ft_putstr_fd
 void	ft_putstr_fd(char *s, int fd);
 
-// ft_putendl_fd - REVISAR
+// ft_putendl_fd
 void	ft_putendl_fd(char *s, int fd);
 
-// ft_putnbr_fd - UNFINISHED
+// ft_putnbr_fd
 void	ft_putnbr_fd(int n, int fd);
 
 /* *********** MY FUNCTIONS *********** */
