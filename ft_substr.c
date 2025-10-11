@@ -6,12 +6,11 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 20:31:06 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/11 23:14:24 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/12 00:56:28 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -33,6 +32,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(str, s, len);
 	return (str);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {
