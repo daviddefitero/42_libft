@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/11 23:03:47 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/11 23:19:11 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string.h>
 # include <stdint.h>
 # include <limits.h>
+# include <unistd.h>
 
 /* ********** Libc FUNCTIONS ********** */
 

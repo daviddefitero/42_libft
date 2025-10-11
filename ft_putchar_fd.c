@@ -3,16 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:26:25 by david             #+#    #+#             */
-/*   Updated: 2025/09/14 21:45:56 by david            ###   ########.fr       */
+/*   Updated: 2025/10/11 23:19:39 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+
+// int	main(void)
+// {
+// 	ft_putchar_fd('H', 1);
+// 	ft_putchar_fd('i', 1);
+// 	ft_putchar_fd('!', 1);
+// 	ft_putchar_fd('\n', 1);
+// 	ft_putchar_fd(':', 1);
+// 	ft_putchar_fd(')', 1);
+// 	ft_putchar_fd('\n', 1);
+// }
