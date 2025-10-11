@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 16:44:19 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/10 17:28:29 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/11 15:54:05 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	if (*nptr == '-' || *nptr == '+')
 		if (*nptr++ == '-')
-			sign *= -1;
+			sign = -sign;
 	while (ft_isdigit(*nptr))
 	{
 		nbr = nbr * 10 + (*nptr - '0');
@@ -36,5 +36,5 @@ int	ft_atoi(const char *nptr)
 
 // int	main(void)
 // {
-// 	printf("%d", ft_atoi("2324"));
+// 	printf("%d", ft_atoi("+2324"));
 // }
