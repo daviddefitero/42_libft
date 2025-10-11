@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/10 17:55:53 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/11 14:53:58 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 
 // • strdup
+char	*ft_strdup(const char *s);
 
 /* ******* ADDITIONAL FUNCTIONS ******* */
 
