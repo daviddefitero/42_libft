@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/11 14:53:58 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/11 23:03:47 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ char	*ft_strdup(const char *s);
 /* ******* ADDITIONAL FUNCTIONS ******* */
 
 // ft_substr
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 // ft_strjoin
 
@@ -118,6 +119,24 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 
 // ft_putnbr_fd - UNFINISHED
-//void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int n, int fd);
+
+/* *********** MY FUNCTIONS *********** */
+
+// ft_minnbr
+// TODO Hacer que acepte infinitos argumentos
+int		ft_minnbr(int n1, int n2);
+
+// ft_maxnbr
+// TODO Hacer que acepte infinitos argumentos
+int		ft_maxnbr(int n1, int n2);
+
+// ft_minsize
+// TODO Hacer que acepte infinitos argumentos
+size_t	ft_minsize(size_t n1, size_t n2);
+
+// ft_maxsize
+// TODO Hacer que acepte infinitos argumentos
+size_t	ft_maxsize(size_t n1, size_t n2);
 
 #endif
