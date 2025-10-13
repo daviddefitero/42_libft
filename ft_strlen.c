@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 22:29:38 by david             #+#    #+#             */
-/*   Updated: 2025/10/07 22:14:09 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/13 22:50:13 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ size_t	ft_strlen(const char *s)
 {
 	const char	*_s = s;
 
-	while (*s)
-		s++;
-	return (s - _s);
+	while (*_s)
+		_s++;
+	return (_s - s);
 }
