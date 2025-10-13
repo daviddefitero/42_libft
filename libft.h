@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/12 01:05:21 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/12 15:41:52 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdint.h>
 # include <limits.h>
 # include <unistd.h>
+# include <stdio.h> // ELIMINAR
 
 /* ********** Libc FUNCTIONS ********** */
 
@@ -101,6 +102,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 
 // ft_strtrim
+char	*ft_strtrim(char const *s1, char const *set);
 
 // ft_split
 
@@ -124,6 +126,9 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 /* *********** MY FUNCTIONS *********** */
+
+// ft_isspace
+int		ft_isspace(int c);
 
 // ft_minnbr
 // TODO Hacer que acepte infinitos argumentos
