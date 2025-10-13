@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:31:46 by david             #+#    #+#             */
-/*   Updated: 2025/10/05 23:34:39 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/13 19:30:16 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,20 +34,6 @@ void	ft_init_test(t_test *test, char *fn_name)
 		"║          Testing %s (x%d)          ║\n"
 		"╚═══════════════════════════════════════════╝\n\n",
 		test->fn_name, test->n);
-}
-
-int	ft_max_value(int a, int b)
-{
-	if (a > b)
-		return (a);
-	return (b);
-}
-
-int	ft_min_value(int a, int b)
-{
-	if (a < b)
-		return (a);
-	return (b);
 }
 
 static void	ft_print_header(void)

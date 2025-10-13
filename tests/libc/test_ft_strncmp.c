@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 15:48:31 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/05 23:30:31 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/13 19:29:57 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	ft_get_values(char *r_str[2], int *expted, int *rslt)
 		len_r_str[i] = strlen(r_str[i]);
 		i++;
 	}
-	max_len = ft_max_value(len_r_str[0], len_r_str[1]);
+	max_len = ft_maxnbr(len_r_str[0], len_r_str[1]);
 	*expted = strncmp(r_str[0], r_str[1], max_len);
 	*rslt = ft_strncmp(r_str[0], r_str[1], max_len);
 }

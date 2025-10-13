@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 22:29:38 by david             #+#    #+#             */
-/*   Updated: 2025/10/05 22:58:57 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/13 19:29:39 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static size_t	ft_get_len(char *a, char *b)
 {
 	if (a == NULL || b == NULL)
 		return (0);
-	return (ft_max_value(strlen(a), strlen(b)));
+	return (ft_maxnbr(strlen(a), strlen(b)));
 }
 
 t_test	test_ft_strchr(void)
