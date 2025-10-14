@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 13:52:34 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/13 22:47:26 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/14 10:22:16 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	const char	*start;
 	const char	*end;
-	size_t		len;
-	char		*str;
 
 	if (!s1)
 		return (NULL);
@@ -70,12 +68,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_bcktrim(s1, set);
 	if (start > end)
 		return (ft_strdup(""));
-	len = end - start + 1;
-	str = malloc(len * sizeof(char));
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, start, len);
-	return (str);
+	return (ft_strdup_len(start, end - start));
 }
 
 // int	main(void)

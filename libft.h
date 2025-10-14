@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/12 15:41:52 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/14 10:18:46 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 
 // ft_split
+char	**ft_split(char const *s, char c);
 
 // ft_itoa
 char	*ft_itoa(int n);
@@ -145,5 +146,8 @@ size_t	ft_minsize(size_t n1, size_t n2);
 // ft_maxsize
 // TODO Hacer que acepte infinitos argumentos
 size_t	ft_maxsize(size_t n1, size_t n2);
+
+// ft_strdup_len
+char	*ft_strdup_len(const char *s, size_t len);
 
 #endif
