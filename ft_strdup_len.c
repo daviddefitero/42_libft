@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 14:54:04 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/14 10:19:20 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/14 20:06:40 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,11 @@ char	*ft_strdup_len(const char *s, size_t len)
 
 // int	main(void)
 // {
-// 	char	a[] = "Lorem ipsum dolor sit amet, non enim anim nostrud velit mollit elit sit magna sit ut non dolore non eiusmod in aute officia sed deserunt";
+// 	char	a[] = "Lorem ipsum dolor sit amet, non enim anim nostrud velit"
+// " mollit elit sit magna sit ut non dolore non eiusmod in aute officia "
+// "sed deserunt";
 // 	char	*b;
 
-// 	b = ft_strdup_len(a, 10);
+// 	b = ft_strdup(a);
 // 	printf("%s", b);
 // }

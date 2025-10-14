@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:57:50 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/14 15:24:10 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/14 20:05:26 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,8 @@ char	**ft_split(char const *s, char c)
 // 	char	**arr;
 // 	int		i;
 
-// 	arr = ft_split("__________\n_______Hi!_____Good_Morning_____aaah____help____me____I’m______in_pain_______________lmao__________________", '_');
+// 	arr = ft_split("__________\n_______Hi!_____Good_Morning_"____aaah____help"
+// "____me____I’m______in_pain_______________lmao__________________", '_');
 // 	// arr = ft_split("split  ||this|for|me|||||!|", '0');
 // 	// arr = ft_split("hello!", ' ');
 // 	i = 0;
