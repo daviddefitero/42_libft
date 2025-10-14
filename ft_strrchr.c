@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dde-fite <dde-fite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 17:28:41 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/08 14:26:44 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/14 20:55:18 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,22 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char	*occrnce;
 
+	if (c == '\0')
+		return ((char *)(s + ft_strlen(s)));
 	occrnce = NULL;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			occrnce = (char *)s;
 		s++;
 	}
 	return (occrnce);
 }
+
+// int	main(void)
+// {
+// 	printf("Test 1 (teste, e): %s\n", ft_strchr("teste", 'e'));
+// 	printf("Test 2 (teste, \\0): %d\n", *ft_strchr("teste", '\0'));
+// 	printf("Test 3 (, \\0): %d\n", *ft_strchr("", '\0'));
+// 	printf("Test 4 ((null), \\0): %s\n", ft_strchr(NULL, '\0'));
+// }
