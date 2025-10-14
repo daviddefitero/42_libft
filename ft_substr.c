@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 20:31:06 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/13 22:46:04 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/14 10:09:24 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*str;
+	size_t const	s_len = ft_strlen(s);
+	char			*str;
 
-	while (start > ft_strlen(s))
+	if (start > s_len)
 		return (ft_strdup(""));
 	s += start;
-	len = ft_minsize(ft_strlen(s) + 1, len + 1);
+	len = ft_minsize(s_len + 1, len + 1);
 	str = malloc(len * sizeof(char));
 	if (!str)
 		return (NULL);
