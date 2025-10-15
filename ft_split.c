@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:57:50 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/14 20:05:26 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/15 21:38:42 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static size_t	ft_cntsplits(char const *s, char const c)
 static const char	*ft_resrvsplit(char **_arr, char **arr,
 	char const *s, size_t len)
 {
-	*_arr = ft_strdup_len(s, len);
+	*_arr = ft_strndup(s, len);
 	if (!*_arr)
 	{
 		while (arr < _arr)

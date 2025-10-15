@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup_len.c                                    :+:      :+:    :+:   */
+/*   ft_strndup.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strdup_len(const char *s, size_t len)
+char	*ft_strndup(const char *s, size_t len)
 {
 	char			*str;
 

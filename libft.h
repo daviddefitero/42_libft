@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/15 20:33:58 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/15 21:38:42 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,7 +149,7 @@ size_t	ft_minsize(size_t n1, size_t n2);
 // TODO Hacer que acepte infinitos argumentos
 size_t	ft_maxsize(size_t n1, size_t n2);
 
-// ft_strdup_len
-char	*ft_strdup_len(const char *s, size_t len);
+// ft_strndup
+char	*ft_strndup(const char *s, size_t len);
 
 #endif

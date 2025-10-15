@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 20:31:06 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/15 21:24:56 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/15 21:38:42 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (start >= s_len)
 		return (ft_strdup(""));
-	return (ft_strdup_len(s + start, ft_minsize(s_len - start, len)));
+	return (ft_strndup(s + start, ft_minsize(s_len - start, len)));
 }
 
 // #include <stdio.h>
