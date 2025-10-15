@@ -6,9 +6,15 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/15 21:38:42 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/15 21:54:00 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                             LIBFT by dde-fite                              */
+/* ************************************************************************** */
+
+/* ************************ PREPROCESSOR STATEMENTS ************************* */
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -18,28 +24,27 @@
 # include <stdint.h>
 # include <limits.h>
 # include <unistd.h>
-# include <stdio.h> // ELIMINAR
+//# include <stdio.h> // FOR TESTING
 
-/* ********** Libc FUNCTIONS ********** */
+/* ***************************** Libc FUNCTIONS ***************************** */
 
-/* --- No external functions allwd ---- */
 // • isalpha
-int		ft_isalpha(int c); // TEST INCLUDED
+int		ft_isalpha(int c); // AUTO-TEST INCLUDED
 
 // • isdigit
-int		ft_isdigit(int c); // TEST INCLUDED
+int		ft_isdigit(int c); // AUTO-TEST INCLUDED
 
 // • isalnum
-int		ft_isalnum(int c); // TEST INCLUDED
+int		ft_isalnum(int c); // AUTO-TEST INCLUDED
 
 // • isascii
-int		ft_isascii(int c); // TEST INCLUDED
+int		ft_isascii(int c); // AUTO-TEST INCLUDED
 
 // • isprint
-int		ft_isprint(int c); // TEST INCLUDED
+int		ft_isprint(int c); // AUTO-TEST INCLUDED
 
 // • strlen
-size_t	ft_strlen(const char *s); // TEST INCLUDED
+size_t	ft_strlen(const char *s); // AUTO-TEST INCLUDED
 
 // • memset
 void	*ft_memset(void *s, int c, size_t n);
@@ -54,25 +59,25 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 
 // • strlcpy
-size_t	ft_strlcpy(char *dst, const char *src, size_t size); // TEST INCLUDED
+size_t	ft_strlcpy(char *dst, const char *src, size_t size); // AUTO-TEST INCLD
 
 // • strlcat
-size_t	ft_strlcat(char *dst, const char *src, size_t size); // TEST INCLUDED
+size_t	ft_strlcat(char *dst, const char *src, size_t size); // AUTO-TEST INCLD
 
 // • toupper
-int		ft_toupper(int c); // TEST INCLUDED
+int		ft_toupper(int c); // AUTO-TEST INCLUDED
 
 // • tolower
-int		ft_tolower(int c); // TEST INCLUDED
+int		ft_tolower(int c); // AUTO-TEST INCLUDED
 
 // • strchr
-char	*ft_strchr(const char *s, int c); // TEST INCLUDED
+char	*ft_strchr(const char *s, int c); // AUTO-TEST INCLUDED
 
 // • strrchr
-char	*ft_strrchr(const char *s, int c); // TEST INCLUDED
+char	*ft_strrchr(const char *s, int c); // AUTO-TEST INCLUDED
 
 // • strncmp
-int		ft_strncmp(const char *s1, const char *s2, size_t n); // TEST INCLUDED
+int		ft_strncmp(const char *s1, const char *s2, size_t n); // AUTO-TEST INCLD
 
 // • memchr
 void	*ft_memchr(const void *s, int c, size_t n);
@@ -86,14 +91,15 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 // • atoi
 int		ft_atoi(const char *nptr);
 
-/* --------- “malloc” allowed --------- */
+/* --------------- malloc allowed --------------- */
+
 // • calloc
 void	*ft_calloc(size_t nmemb, size_t size);
 
 // • strdup
 char	*ft_strdup(const char *s);
 
-/* ******* ADDITIONAL FUNCTIONS ******* */
+/* ************************** ADDITIONAL FUNCTIONS ************************** */
 
 // ft_substr
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -128,7 +134,7 @@ void	ft_putendl_fd(char *s, int fd);
 // ft_putnbr_fd
 void	ft_putnbr_fd(int n, int fd);
 
-/* *********** MY FUNCTIONS *********** */
+/* ****************************** MY FUNCTIONS ****************************** */
 
 // ft_isspace
 int		ft_isspace(int c);
