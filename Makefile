@@ -6,7 +6,7 @@
 #    By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 21:44:11 by dde-fite          #+#    #+#              #
-#    Updated: 2025/10/15 21:47:18 by dde-fite         ###   ########.fr        #
+#    Updated: 2025/10/15 22:24:42 by dde-fite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,31 +16,36 @@
 
 # ******************************** VARIABLES  ******************************** #
 # FILES
-NAME	= libft.a
-SRC		:= $(wildcard ft_*.c)
-OBJ		:= $(patsubst %.c,%.o,$(SRC))
+NAME		= libft.a
+SRC			:= $(filter-out $(BONUS),$(wildcard ft_*.c))
+OBJ			:= $(patsubst %.c,%.o,$(SRC))
+BONUSSRC	:= $(wildcard ft_lst*.c)
+BONUSOBJ 	:= $(patsubst %.c,%.o,$(BONUS))
 
 # GCC COMPILER
-CC		= cc
-CFLAGS	= -Wall -Werror -Wextra -c
+CC			= cc
+CFLAGS		= -Wall -Werror -Wextra -c
 
 # AR LIBRARY
-AR		= ar
-AFLAGS	= rcs
+AR			= ar
+AFLAGS		= rcs
+AFLAGSBONUS	= rs
 
 # RM COMMAND
-RM		= rm
+RM			= rm
 
 # ********************************** RULES  ********************************** #
-${NAME}:
+${NAME}: ${SRC}
 	@echo "# **************************************************************** #"
 	@echo "# *                      LIBFT by dde-fite                       * #"
 	@echo "# **************************************************************** #"
-	@echo "Compiling LIBFT as ${NAME} ..."
+	@echo "Compiling libft functions ..."
 	@echo ""
-	@${CC} ${CFLAGS} ${SRC}
+	@${CC} ${CFLAGS} $^
+	@echo "Archiving objects in ${NAME} ..."
+	@echo ""
 	@${AR} ${AFLAGS} ${NAME} ${OBJ}
-	@echo "Compilation completed :)"
+	@echo "Process completed :)"
 	@echo ""
 
 all: ${NAME}
@@ -48,7 +53,7 @@ all: ${NAME}
 clean:
 	@echo "Deleting all object files (.o of ft_*.c) ..."
 	@echo ""
-	@${RM} -rf ${OBJ}
+	@${RM} -rf ${OBJ} ${BONUSOBJ}
 
 fclean: clean
 	@echo "Deleting binary file (${NAME}) ..."
@@ -56,5 +61,13 @@ fclean: clean
 	@${RM} -f ${NAME}
 
 re: fclean all
+
+bonus: ${NAME} ${BONUSSRC}
+	@echo "Compiling bonus functions ..."
+	@echo ""
+	@${CC} ${CFLAGS} ${BONUSSRC}
+	@echo "Adding objects to ${NAME} ..."
+	@echo ""
+	@${AR} ${AFLAGSBONUS} ${NAME} ${BONUSOBJ}
 
 .PHONY: all clean fclean re
