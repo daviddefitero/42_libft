@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/14 10:18:46 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/15 20:33:58 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,8 +111,10 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 
 // ft_strmapi
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 // ft_striteri
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 // ft_putchar_fd
 void	ft_putchar_fd(char c, int fd);
