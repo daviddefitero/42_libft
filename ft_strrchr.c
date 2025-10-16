@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 17:28:41 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/14 20:55:18 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/16 19:14:55 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char	*occrnce;
 
-	if (c == '\0')
+	if (((unsigned char)c) == '\0')
 		return ((char *)(s + ft_strlen(s)));
 	occrnce = NULL;
 	while (*s)
 	{
-		if (*s == (char)c)
+		if ((unsigned char)*s == (unsigned char)c)
 			occrnce = (char *)s;
 		s++;
 	}
