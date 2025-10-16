@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 17:34:54 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/15 21:34:17 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/16 19:05:31 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (nmemb > SIZE_MAX / size)
+	if (nmemb * size > SIZE_MAX)
 		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)
