@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/16 18:19:32 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/16 18:30:13 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,6 +164,12 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 
 // ft_lstclear
 void	ft_lstclear(t_list **lst, void (*del)(void*));
+
+// ft_lstiter
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+// ft_lstmap
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /* ****************************** MY FUNCTIONS ****************************** */
 
