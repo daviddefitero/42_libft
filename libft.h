@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/16 18:30:13 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/16 21:10:48 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,19 +177,15 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_isspace(int c);
 
 // ft_minnbr
-// TODO Hacer que acepte infinitos argumentos
 int		ft_minnbr(int n1, int n2);
 
 // ft_maxnbr
-// TODO Hacer que acepte infinitos argumentos
 int		ft_maxnbr(int n1, int n2);
 
 // ft_minsize
-// TODO Hacer que acepte infinitos argumentos
 size_t	ft_minsize(size_t n1, size_t n2);
 
 // ft_maxsize
-// TODO Hacer que acepte infinitos argumentos
 size_t	ft_maxsize(size_t n1, size_t n2);
 
 // ft_strndup
