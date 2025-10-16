@@ -6,7 +6,7 @@
 #    By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 21:44:11 by dde-fite          #+#    #+#              #
-#    Updated: 2025/10/16 18:56:05 by dde-fite         ###   ########.fr        #
+#    Updated: 2025/10/16 18:57:08 by dde-fite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,12 +53,12 @@ all: ${NAME}
 clean:
 	@echo "Deleting all object files (.o of ft_*.c) ..."
 	@echo ""
-	@${RM} -rf ${OBJ} ${BONUSOBJ} .bonus
+	@${RM} -rf ${OBJ} ${BONUSOBJ}
 
 fclean: clean
 	@echo "Deleting binary file (${NAME}) ..."
 	@echo ""
-	@${RM} -f ${NAME}
+	@${RM} -f ${NAME} .bonus
 
 re: fclean all
 
