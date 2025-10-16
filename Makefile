@@ -6,7 +6,7 @@
 #    By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 21:44:11 by dde-fite          #+#    #+#              #
-#    Updated: 2025/10/15 22:24:42 by dde-fite         ###   ########.fr        #
+#    Updated: 2025/10/16 18:55:23 by dde-fite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,10 @@
 # ******************************** VARIABLES  ******************************** #
 # FILES
 NAME		= libft.a
-SRC			:= $(filter-out $(BONUS),$(wildcard ft_*.c))
-OBJ			:= $(patsubst %.c,%.o,$(SRC))
 BONUSSRC	:= $(wildcard ft_lst*.c)
-BONUSOBJ 	:= $(patsubst %.c,%.o,$(BONUS))
+BONUSOBJ 	:= $(patsubst %.c,%.o,$(BONUSSRC))
+SRC			:= $(filter-out $(BONUSSRC),$(wildcard ft_*.c))
+OBJ			:= $(patsubst %.c,%.o,$(SRC))
 
 # GCC COMPILER
 CC			= cc
@@ -54,6 +54,7 @@ clean:
 	@echo "Deleting all object files (.o of ft_*.c) ..."
 	@echo ""
 	@${RM} -rf ${OBJ} ${BONUSOBJ}
+	@rm -rf .bonus
 
 fclean: clean
 	@echo "Deleting binary file (${NAME}) ..."
@@ -62,12 +63,17 @@ fclean: clean
 
 re: fclean all
 
-bonus: ${NAME} ${BONUSSRC}
+.bonus: ${NAME} ${BONUSSRC}
 	@echo "Compiling bonus functions ..."
 	@echo ""
 	@${CC} ${CFLAGS} ${BONUSSRC}
 	@echo "Adding objects to ${NAME} ..."
 	@echo ""
 	@${AR} ${AFLAGSBONUS} ${NAME} ${BONUSOBJ}
+	@touch .bonus
 
-.PHONY: all clean fclean re
+bonus: .bonus
+	@echo "bonus done.."
+
+
+.PHONY: all clean fclean re bonus
