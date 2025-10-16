@@ -6,7 +6,7 @@
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:28:04 by david             #+#    #+#             */
-/*   Updated: 2025/10/15 22:33:25 by dde-fite         ###   ########.fr       */
+/*   Updated: 2025/10/16 17:25:38 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # include <stdint.h>
 # include <limits.h>
 # include <unistd.h>
-//# include <stdio.h> // FOR TESTING
+# include <stdio.h> // FOR TESTING
 
 /* ******************** STRUCTS, TYPES, OTHER STATEMENTS ******************** */
 
@@ -141,6 +141,23 @@ void	ft_putendl_fd(char *s, int fd);
 
 // ft_putnbr_fd
 void	ft_putnbr_fd(int n, int fd);
+
+/* **************************** BONUS FUNCTIONS ***************************** */
+
+// ft_lstnew
+t_list	*ft_lstnew(void *content);
+
+// ft_lstadd_front
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+// ft_lstsize
+int		ft_lstsize(t_list *lst);
+
+// ft_lstlast
+t_list	*ft_lstlast(t_list *lst);
+
+// ft_lstadd_back
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 /* ****************************** MY FUNCTIONS ****************************** */
 
