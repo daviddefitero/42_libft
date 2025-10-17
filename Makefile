@@ -6,7 +6,7 @@
 #    By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 21:44:11 by dde-fite          #+#    #+#              #
-#    Updated: 2025/10/17 17:25:52 by dde-fite         ###   ########.fr        #
+#    Updated: 2025/10/17 23:29:18 by dde-fite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ BONUSSRC	:= $(wildcard ft_lst*.c)
 BONUSOBJ 	:= $(patsubst %.c,%.o,$(BONUSSRC))
 SRC			:= $(filter-out $(BONUSSRC),$(wildcard ft_*.c))
 OBJ			:= $(patsubst %.c,%.o,$(SRC))
-TOTAL := $(words $(SRC))
+TOTAL		:= $(words $(SRC))
 
 # GCC COMPILER
 CC			= cc
