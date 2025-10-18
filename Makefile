@@ -6,7 +6,7 @@
 #    By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 21:44:11 by dde-fite          #+#    #+#              #
-#    Updated: 2025/10/17 23:29:18 by dde-fite         ###   ########.fr        #
+#    Updated: 2025/10/18 15:55:21 by dde-fite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,7 +80,7 @@ ${NAME}: ${SRC}
 	@echo -e "${YELLOW}"
 	@count=0; \
 	for f in $(SRC); do \
-		$(CC) $(CFLAGS) $$f -o $${f%.c}.o; \
+		$(CC) $(CFLAGS) $$f; \
 		count=$$((count + 1)); \
 		progress=$$((count * 100 / $(TOTAL))); \
 		hashes_len=$$((progress * $(BAR_LEN) / 100)); \
