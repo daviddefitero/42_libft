@@ -6,7 +6,7 @@
 #    By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 21:44:11 by dde-fite          #+#    #+#              #
-#    Updated: 2025/10/18 16:16:39 by dde-fite         ###   ########.fr        #
+#    Updated: 2025/10/18 16:17:36 by dde-fite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -137,6 +137,5 @@ re: fclean all
 
 bonus: .bonus
 	@echo "bonus done.."
-
 
 .PHONY: all clean fclean re bonus
