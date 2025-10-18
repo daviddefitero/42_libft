@@ -6,13 +6,27 @@
 #    By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 21:44:11 by dde-fite          #+#    #+#              #
-#    Updated: 2025/10/18 15:55:21 by dde-fite         ###   ########.fr        #
+#    Updated: 2025/10/18 16:16:39 by dde-fite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # **************************************************************************** #
 # *                            LIBFT by dde-fite                             * #
 # **************************************************************************** #
+
+# Files required for normal compilation: ft_atoi.c, ft_isspace.c, ft_lstmap.c,
+# ft_memmove.c, ft_split.c, ft_strmapi.c, ft_toupper.c, ft_bzero.c, ft_itoa.c,
+# ft_memset.c, ft_strchr.c, ft_strncmp.c, libft.h, ft_calloc.c, ft_minnbr.c,
+# ft_strdup.c, ft_strndup.c, ft_isalnum.c, ft_maxnbr.c, ft_minsize.c,
+# ft_striteri.c, ft_strnstr.c, ft_isalpha.c, ft_maxsize.c, ft_putchar_fd.c,
+# ft_strjoin.c, ft_strrchr.c, ft_isascii.c, ft_memchr.c, ft_putendl_fd.c,
+# ft_strlcat.c, ft_strtrim.c, ft_isdigit.c, ft_lstiter.c, ft_memcmp.c,
+# ft_putnbr_fd.c, ft_strlcpy.c, ft_substr.c, ft_isprint.c, ft_lstlast.c,
+# ft_memcpy.c, ft_putstr_fd.c, ft_strlen.c, ft_tolower.c.
+
+# Files required for bonus compilation:
+# libft.a (or the name specified in ${NAME}), ft_lstnew.c, ft_lstadd_back.c,
+# ft_lstsize.c, ft_lstadd_front.c, ft_lstclear.c, ft_lstdelone.c.
 
 # ******************************** VARIABLES  ******************************** #
 SHELL := /bin/bash
