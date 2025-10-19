@@ -6,7 +6,7 @@
 #    By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 21:44:11 by dde-fite          #+#    #+#              #
-#    Updated: 2025/10/18 16:34:21 by dde-fite         ###   ########.fr        #
+#    Updated: 2025/10/19 17:35:18 by dde-fite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,18 +25,20 @@
 # ft_memcpy.c, ft_putstr_fd.c, ft_strlen.c, ft_tolower.c.
 
 # Files required for bonus compilation:
-# libft.a (or the name specified in ${NAME}), ft_lstnew.c, ft_lstadd_back.c,
-# ft_lstsize.c, ft_lstadd_front.c, ft_lstclear.c, ft_lstdelone.c, ft_lstmap.c,
-# ft_lstiter.c, ft_lstlast.c
+# libft.a (or the name specified in ${NAME}), ft_lstnew_bonus.c,
+# ft_lstadd_back_bonus.c, ft_lstsize_bonus.c, ft_lstadd_front_bonus.c,
+# ft_lstclear_bonus.c, ft_lstdelone_bonus.c, ft_lstmap_bonus.c,
+# ft_lstiter_bonus.c, ft_lstlast_bonus.c
 
 # ******************************** VARIABLES  ******************************** #
 SHELL := /bin/bash
 
 # FILES
 NAME		= libft.a
-BONUSSRC	:= ft_lstnew.c ft_lstadd_back.c ft_lstsize.c ft_lstadd_front.c \
-				ft_lstclear.c ft_lstdelone.c ft_lstmap.c ft_lstiter.c \
-				ft_lstlast.c
+BONUSSRC	:= ft_lstnew_bonus.c ft_lstadd_back_bonus.c ft_lstsize_bonus.c \
+				ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
+				ft_lstdelone_bonus.c ft_lstmap_bonus.c ft_lstiter_bonus.c \
+				ft_lstlast_bonus.c
 BONUSOBJ 	:= $(patsubst %.c,%.o,$(BONUSSRC))
 SRC			= ft_atoi.c ft_isspace.c ft_memmove.c ft_split.c ft_strmapi.c \
 				ft_toupper.c ft_bzero.c ft_itoa.c ft_memset.c ft_strchr.c \
@@ -48,7 +50,6 @@ SRC			= ft_atoi.c ft_isspace.c ft_memmove.c ft_split.c ft_strmapi.c \
 				ft_isdigit.c ft_memcmp.c ft_putnbr_fd.c ft_strlcpy.c \
 				ft_substr.c ft_isprint.c ft_memcpy.c ft_putstr_fd.c \
 				ft_strlen.c ft_tolower.c
-
 OBJ			:= $(patsubst %.c,%.o,$(SRC))
 TOTAL		:= $(words $(SRC))
 
@@ -106,18 +107,17 @@ ${NAME}: ${SRC}
 	@echo "Compiling libft functions ..."
 	@echo -e "${YELLOW}"
 	@count=0; \
-	for f in $(SRC); do \
-		$(CC) $(CFLAGS) $$f; \
+	for file in ${SRC}; do \
+		${CC} ${CFLAGS} $$file; \
 		count=$$((count + 1)); \
-		progress=$$((count * 100 / $(TOTAL))); \
-		hashes_len=$$((progress * $(BAR_LEN) / 100)); \
+		progress=$$((count * 100 / ${TOTAL})); \
+		hashes_len=$$((progress * ${BAR_LEN} / 100)); \
 		hashes=$$(printf '%0.s#' $$(seq 1 $$hashes_len)); \
 		spaces_len=$$((BAR_LEN - hashes_len)); \
 		spaces=$$(printf '%0.s ' $$(seq 1 $$spaces_len)); \
 		printf "\r[%s%s] %d%%" "$$hashes" "$$spaces" "$$progress"; \
 	done; \
-	echo; \
-
+	echo
 	@echo -e "${RESET}"
 	@echo "Archiving objects in ${NAME} ..."
 	@echo ""
