@@ -6,7 +6,7 @@
 #    By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 21:44:11 by dde-fite          #+#    #+#              #
-#    Updated: 2025/10/19 17:35:18 by dde-fite         ###   ########.fr        #
+#    Updated: 2025/10/19 17:39:17 by dde-fite         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ BONUSSRC	:= ft_lstnew_bonus.c ft_lstadd_back_bonus.c ft_lstsize_bonus.c \
 				ft_lstdelone_bonus.c ft_lstmap_bonus.c ft_lstiter_bonus.c \
 				ft_lstlast_bonus.c
 BONUSOBJ 	:= $(patsubst %.c,%.o,$(BONUSSRC))
+TOTALBONUS	:= $(words $(BONUSSRC))
 SRC			= ft_atoi.c ft_isspace.c ft_memmove.c ft_split.c ft_strmapi.c \
 				ft_toupper.c ft_bzero.c ft_itoa.c ft_memset.c ft_strchr.c \
 				ft_strncmp.c ft_calloc.c ft_minnbr.c ft_strdup.c \
@@ -141,8 +142,20 @@ re: fclean all
 
 .bonus: ${NAME} ${BONUSSRC}
 	@echo "Compiling bonus functions ..."
-	@echo ""
-	@${CC} ${CFLAGS} ${BONUSSRC}
+	@echo -e "${CYAN}"
+	@count=0; \
+	for file in ${BONUSSRC}; do \
+		${CC} ${CFLAGS} $$file; \
+		count=$$((count + 1)); \
+		progress=$$((count * 100 / ${TOTALBONUS})); \
+		hashes_len=$$((progress * ${BAR_LEN} / 100)); \
+		hashes=$$(printf '%0.s#' $$(seq 1 $$hashes_len)); \
+		spaces_len=$$((BAR_LEN - hashes_len)); \
+		spaces=$$(printf '%0.s ' $$(seq 1 $$spaces_len)); \
+		printf "\r[%s%s] %d%%" "$$hashes" "$$spaces" "$$progress"; \
+	done; \
+	echo
+	@echo -e "${RESET}"
 	@echo "Adding objects to ${NAME} ..."
 	@echo ""
 	@${AR} ${AFLAGSBONUS} ${NAME} ${BONUSOBJ}
