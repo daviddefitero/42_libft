@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-fite <dde-fite@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 17:13:45 by dde-fite          #+#    #+#             */
-/*   Updated: 2025/10/16 17:20:39 by dde-fite         ###   ########.fr       */
+/*   Created: 2025/10/16 17:25:43 by dde-fite          #+#    #+#             */
+/*   Updated: 2025/10/18 20:51:25 by dde-fite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	unsigned int	i;
-
-	if (!lst)
-		return (0);
-	i = 1;
-	while (lst->next)
+	if (!*lst)
 	{
-		lst = lst->next;
-		i++;
+		*lst = new;
+		return ;
 	}
-	return (i);
+	while ((*lst)->next)
+		lst = &(*lst)->next;
+	(*lst)->next = new;
 }
 
 // int	main(void)
@@ -41,8 +38,12 @@ int	ft_lstsize(t_list *lst)
 // 	a = ft_lstnew((void *)a_cnt);
 // 	b = ft_lstnew((void *)b_cnt);
 // 	c = ft_lstnew((void *)c_cnt);
-// 	ft_lstadd_front(&begin, c);
-// 	ft_lstadd_front(&begin, b);
-// 	ft_lstadd_front(&begin, a);
-// 	printf("Number of nodes: %d\n", ft_lstsize(begin));
+// 	ft_lstadd_back(&begin, a);
+// 	ft_lstadd_back(&begin, b);
+// 	ft_lstadd_back(&begin, c);
+// 	while (begin)
+// 	{
+// 		printf("%s\n", (char *)begin->content);
+// 		begin = begin->next;
+// 	}
 // }
