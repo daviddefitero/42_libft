@@ -88,3 +88,6 @@ gcc main.c libft.a
 
 ## Got any suggestions?
 If you find any errors or have any new ideas for improving this repository, feel free to open an Issue or Pull Request, or contact me at my email address: nora@defitero.com
+
+# License
+This work is published under the terms of **[42 Unlicense](https://github.com/gcamerli/42unlicense)**.
