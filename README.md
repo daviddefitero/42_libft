@@ -1,3 +1,4 @@
+
 <p align="center">
 	<img align="center" src="media/42_libft.png">
 	<h1 align="center">42_Libft</h1>
@@ -7,6 +8,10 @@
 	<img alt="moulinette passing" src="https://img.shields.io/badge/moulinette-passing-gree">
 	<img alt="francinette passing" src="https://img.shields.io/badge/francinette-passing-gree">
     <img alt="Static Badge" src="https://img.shields.io/badge/125/100-gree?logo=42&logoColor=white">
+</p>
+
+<p align="center">
+This work is published under the terms of <a href="https://github.com/gcamerli/42unlicense"><b>42 Unlicense</b></a>
 </p>
 
 <div align="center">
@@ -88,6 +93,3 @@ gcc main.c libft.a
 
 ## Got any suggestions?
 If you find any errors or have any new ideas for improving this repository, feel free to open an Issue or Pull Request, or contact me at my email address: nora@defitero.com
-
-# License
-This work is published under the terms of **[42 Unlicense](https://github.com/gcamerli/42unlicense)**.
