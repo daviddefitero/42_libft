@@ -29,7 +29,7 @@ This work is published under the terms of <a href="LICENSE"><b>MIT license</b></
 <div align="center">
     <h3>ft_isspace</h3>
     <h3>ft_strndup</h3>
-    <h3>ft_nbrlen</h3>
+    <h3><a href="docs/own_functions/ft_nbrlen.md">ft_nbrlen</a></h3>
     <h3>ft_maxnbr/ft_minnbr</h3>
     <h3>ft_maxsize/ft_minsize</h3>
 </div>
