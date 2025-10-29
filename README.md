@@ -36,7 +36,7 @@ This work is published under the terms of <a href="LICENSE"><b>MIT license</b></
 
 ### Libc Functions
 <div align="center">
-    <h3>ft_strlen</h3>
+    <h3><a href="docs/libc/ft_strlen.md">ft_strlen</a></h3>
     <h3>...</h3>
 </div>
 
