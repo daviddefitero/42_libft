@@ -1,6 +1,6 @@
 # ft_nbrlen
 
-<h3 align="center">Measure the number of digits contained in an integer.</h3>
+<h3 align="center">Measure the number of digits contained in an integer</h3>
 
 Accepting a long int as a parameter, divide the number by 10 until it can no longer be divided. For each iteration, we will add a counter, which will be the return value.
 
