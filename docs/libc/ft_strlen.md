@@ -8,7 +8,7 @@ I know that in practice there is hardly any difference between doing it this way
 
 The idea is to declare a constant pointer called _s that will point to the content of s. Since it is a constant value, norminette allows me to declare and initialize at the same time, thus saving me a line ;) .
 
-Then, while (*_s), or what would be the same (*_s != ‘’\0'), will increment a memory position to _s. This will continue until the string ends.
+Then, while (\*_s), *or what would be the same (\*_s != ‘’\0')*, will increment a memory position to _s. This will continue until the string ends.
 
 If you're wondering how I can modify a constant pointer, it's because when you make a constant pointer, what it understands as constant is the value it points to, not the pointer itself.
 
