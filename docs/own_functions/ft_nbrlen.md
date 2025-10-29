@@ -11,5 +11,5 @@ The idea of accepting a long is to have more flexibility in case we need ranges 
 If you are wondering why I return int and not long or size_t, it is because the number of digits in long will always fit in an int. I also did not think it was correct to return a size_t, since the number of digits does not necessarily represent the size in bytes that it occupies.
 
 <p align="center">
-	<img src="../../media/codes/ft_nbrlen.png">
+	<img width="800" src="../../media/codes/ft_nbrlen.png">
 </p>
