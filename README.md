@@ -24,7 +24,7 @@ This work is published under the terms of <a href="LICENSE"><b>MIT license</b></
 	<img height="500" src="media/make.png">
 </div>
 
-## Functions
+## Explanations of functions
 ### Own Functions
 <div align="center">
     <h3>ft_isspace</h3>
