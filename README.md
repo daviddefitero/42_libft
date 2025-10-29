@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-This work is published under the terms of <a href="https://github.com/gcamerli/42unlicense"><b>42 Unlicense</b></a>
+This work is published under the terms of <a href="LICENSE"><b>MIT license</b></a>
 </p>
 
 <div align="center">
@@ -20,7 +20,7 @@ This work is published under the terms of <a href="https://github.com/gcamerli/4
 </div>
 
 <div align="center">
-	<img height="500" src="media/code.png">
+	<img height="500" src="media/codes/ft_split.png">
 	<img height="500" src="media/make.png">
 </div>
 
